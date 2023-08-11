@@ -3,7 +3,6 @@ class CaixaDaLanchonete {
     constructor() {
         this.lanchonete = new Lanchonete();
         this.itensCompra = [];
-        this.formaPagamento = 'dinheiro';
     }
 
     adicionarItemAoCarrinho(item) {
@@ -59,13 +58,14 @@ class CaixaDaLanchonete {
 }
 
 const caixa = new CaixaDaLanchonete();
+caixa.adicionarItemAoCarrinho('suco')
 caixa.adicionarItemAoCarrinho('combo1')
 caixa.adicionarItemAoCarrinho('cafe');
 caixa.adicionarItemAoCarrinho('chantily');
 caixa.formaPagamento = 'credito';
 
-const valorCompra = caixa.calcularValorDaCompra();
-console.log(valorCompra);
+const valorFinalDaCompra = caixa.calcularValorDaCompra();
+console.log(valorFinalDaCompra);
 
 export { CaixaDaLanchonete };
 
